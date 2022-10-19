@@ -6,12 +6,8 @@ body {
   justify-content: center;
   color: white;
   text-transform: uppercase;
-  background-color: #363636;
+  background-image: url(images/fon.webp);
+  background-position: center;
+  background-size: cover;
 }
 
-h1 { color: #e6c300; }
-
-img {
-  width: 90vw;
-  max-width: 256px;
-}
