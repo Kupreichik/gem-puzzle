@@ -13,7 +13,7 @@ body {
 
 .container {
   margin-top: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-around;
   width: 320px;
@@ -45,4 +45,10 @@ body {
 .btn:active {
   background-color: #f1f0f03d;
   color: rgb(197, 198, 199);
+}
+
+.time,
+.moves {
+  width: 150px;
+  padding-left: 48px;
 }

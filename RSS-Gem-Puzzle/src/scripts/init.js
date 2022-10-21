@@ -7,6 +7,7 @@ import { onTouchstart } from "./onTouchstart"
 import { setStartState } from "./set-start-state"
 import { changeSize } from "./change-size"
 import { handleBtnClick } from "./handle-btn-click"
+import { showTime } from "./show-time"
 
 export let canvas = document.createElement('canvas');
 canvas.width  = 320;
@@ -30,6 +31,16 @@ btns.innerHTML = `<div class="btn new-game">New Game</div>
 <div class="btn new-game">Save</div>
 <div class="btn new-game">Best Results</div>`
 
+let container = document.createElement('div');
+container.classList.add('container');
+
+export let time = document.createElement('div');
+time.classList.add('time');
+
+export let moves = document.createElement('div');
+moves.classList.add('moves');
+moves.textContent = `Moves: 0`;
+
 export let game = new Game(context, canvas.width);
 
 export function init() {
@@ -39,6 +50,11 @@ export function init() {
   root.append(canvas);
   canvas.before(btns);
   canvas.after(sizes);
+  btns.after(container);
+  container.prepend(time);
+  container.append(moves);
+
+  showTime();
 
   canvas.addEventListener('mousedown', onMousedown);
   canvas.addEventListener('touchstart', onTouchstart);
