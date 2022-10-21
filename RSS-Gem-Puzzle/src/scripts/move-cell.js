@@ -9,6 +9,5 @@ Game.prototype.moveCell = function(x, y) {
   if (canMoveVertical || canMoveHorizontal) {
     this.state[nullCell.y][nullCell.x] = this.state[y][x];
     this.state[y][x] = 0;
-    this.clicks++;
   }
 };

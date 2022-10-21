@@ -4,10 +4,45 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #a5a5a5;
   background-image: url(images/fon.webp);
   background-position: center;
   background-size: cover;
 }
 
+.container {
+  margin-top: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  width: 320px;
+  font-size: 15px;
+}
+
+.size {
+  border: 1px solid;
+  padding: 1px 4px;
+  cursor: pointer;
+}
+
+.size:active {
+  color: aliceblue;
+}
+
+.current-size {
+  color: #00e2bb
+}
+
+.btn {
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 4px 6px;
+  background-color: #7070703d;
+}
+
+.btn:active {
+  background-color: #f1f0f03d;
+  color: rgb(197, 198, 199);
+}

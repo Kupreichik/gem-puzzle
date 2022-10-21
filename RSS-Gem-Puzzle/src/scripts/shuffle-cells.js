@@ -27,7 +27,7 @@ Game.prototype.shuffleCells = function(count) {
       }
     }
 
-    if (0 <= x && x <= 3 && 0 <= y && y <= 3) {
+    if (0 <= x && x <= this.size - 1 && 0 <= y && y <= this.size - 1) {
       this.moveCell(x, y);
     }
   }

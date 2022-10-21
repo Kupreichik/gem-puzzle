@@ -17,13 +17,14 @@ export function autoMove() {
     game.numView();
     game.context.fillText(
       game.movingNum, 
-      (game.positionX + game.cellSize / 2), 
-      (game.positionY + game.cellSize / 2),
+      (game.positionX + Math.round(game.cellSize / 2)), 
+      (game.positionY + Math.round(game.cellSize / 2)),
     );
     game.positionX = game.positionX + 2 * nX;
     game.positionY = game.positionY + 2 * nY;
 
-    if(game.positionX !== (x2 * game.cellSize) || game.positionY !== (y2 * game.cellSize)) {
+    if( (Math.round(game.positionX / 2) + 1*nX) !== Math.round((x2 * game.cellSize) / 2) ||
+      (Math.round(game.positionY / 2) + 1*nY) !== Math.round((y2 * game.cellSize) / 2)) {
       setTimeout(autoMove, 1);
     } else {
       game.finishMove();

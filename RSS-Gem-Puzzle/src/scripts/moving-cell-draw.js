@@ -6,14 +6,14 @@ Game.prototype.movingCellDraw = function(event) {
   game.context.fillRect(0, 0, canvas.width, canvas.height);
   game.gameDraw()
   game.context.fillRect(
-    (event.clientX - canvas.offsetLeft - game.cellSize / 2), 
-    (event.clientY - canvas.offsetTop - game.cellSize / 2),
+    (event.clientX - canvas.offsetLeft - Math.round(game.cellSize / 2)), 
+    (event.clientY - canvas.offsetTop - Math.round(game.cellSize / 2)),
     game.cellSize, 
     game.cellSize
   );
   game.cellView(
-    (event.clientX - canvas.offsetLeft - game.cellSize / 2), 
-    (event.clientY - canvas.offsetTop - game.cellSize / 2)
+    (event.clientX - canvas.offsetLeft - Math.round(game.cellSize / 2)), 
+    (event.clientY - canvas.offsetTop - Math.round(game.cellSize / 2))
     );
   game.numView();
   game.context.fillText(
