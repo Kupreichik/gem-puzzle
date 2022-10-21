@@ -13,4 +13,7 @@ Game.prototype.finishMove = function() {
   this.context.clearRect(0, 0, canvas.width, canvas.height);
   this.context.fillRect(0, 0, canvas.width, canvas.height);
   this.gameDraw()
+  this.positionX = 0;
+  this.positionY = 0;
+  this.mouseDownAt = 0;
 }

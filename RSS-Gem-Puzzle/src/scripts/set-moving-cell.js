@@ -9,5 +9,5 @@ Game.prototype.setMovingCell = function(event) {
   this.state[y][x] = null;
   this.positionX = this.movingCell.x * this.cellSize;
   this.positionY = this.movingCell.y * this.cellSize;
-  this.mouseDownAt = {x: event.pageX, y: event.pageY}
+  this.mouseDownAt = {x: event.pageX, y: event.pageY};
 }

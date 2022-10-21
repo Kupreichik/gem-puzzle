@@ -13,10 +13,7 @@ export function autoMove() {
     game.context.clearRect(0, 0, canvas.width, canvas.height);
     game.context.fillRect(0, 0, canvas.width, canvas.height);
     game.gameDraw()
-    game.cellView(
-      game.positionX, 
-      game.positionY
-      );
+    game.cellView(game.positionX, game.positionY);
     game.numView();
     game.context.fillText(
       game.movingNum, 
@@ -30,6 +27,7 @@ export function autoMove() {
       setTimeout(autoMove, 1);
     } else {
       game.finishMove();
+      
     }
   } catch {
     console.log('Ошибка обработана')

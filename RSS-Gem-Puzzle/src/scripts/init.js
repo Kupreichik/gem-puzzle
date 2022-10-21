@@ -3,6 +3,7 @@ import { shuffleCells } from "./shuffle-cells"
 import { gameDraw } from "./game-draw"
 import { root } from "./dom-elements"
 import { onMousedown } from "./onMousedown"
+import { onTouchstart } from "./onTouchstart"
 
 export let canvas = document.createElement('canvas');
 canvas.width  = 320;
@@ -22,4 +23,5 @@ export function init() {
   root.append(canvas);
 
   canvas.addEventListener('mousedown', onMousedown);
+  canvas.addEventListener('touchstart', onTouchstart);
 }
