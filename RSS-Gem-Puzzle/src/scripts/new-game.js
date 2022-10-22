@@ -3,6 +3,7 @@ import { shuffleCells } from "./shuffle-cells"
 import { setStartState } from "./set-start-state"
 import { gameDraw } from "./game-draw"
 import { canvas, time, moves } from "./init"
+import { showTime } from "./show-time"
 
 Game.prototype.newGame = function() {
   this.moves = 0;
@@ -15,6 +16,8 @@ Game.prototype.newGame = function() {
   this.shuffleCells(n);
   this.cellSize = Math.round(canvas.width / this.size);
   this.context.clearRect(0, 0, canvas.width, canvas.height);
+  this.context.fillStyle = "#222";
   this.context.fillRect(0, 0, canvas.width, canvas.height);
   this.gameDraw();
+  this.timeRuns = true;
 }

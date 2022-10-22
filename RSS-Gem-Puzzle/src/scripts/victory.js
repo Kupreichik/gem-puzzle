@@ -1,14 +1,12 @@
 import { Game } from "./game-class"
 
 Game.prototype.victory = function() {
-  let res = true;
-  for (let i = 0; i < 4; i++) {
-    for (let j = 0; j < 4; j++) {
+  for (let i = 0; i < this.size; i++) {
+    for (let j = 0; j < this.size; j++) {
       if (this.startState[i][j] != this.state[i][j]) {
-        res = false;
-        break;
+        return false;
       }
     }
   }
-  return res;
+  return true;
 };

@@ -6,6 +6,6 @@ export function showTime() {
   let strSeconds = seconds < 10 ? '0' + seconds : seconds;
   let strMinutes = minutes < 10 ? '0' + minutes : minutes;
   time.textContent = `Time: ${strMinutes}:${strSeconds}`;
-  game.time++
+  game.time = game.timeRuns ? game.time + 1 : game.time;
   setTimeout(showTime, 1000);
 }
