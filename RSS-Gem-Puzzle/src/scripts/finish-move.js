@@ -1,7 +1,7 @@
 import { Game } from "./game-class"
 import { getNullCell } from "./get-null-cell"
 import { gameDraw } from "./game-draw"
-import { canvas, moves } from "./init"
+import { canvas, moves, sound } from "./init"
 
 Game.prototype.finishMove = function() {
   let nullCell = this.getNullCell();
@@ -17,4 +17,7 @@ Game.prototype.finishMove = function() {
   this.positionY = 0;
   this.mouseDownAt = 0;
   moves.textContent = `Moves: ${this.moves}`;
+  if(this.sound) {
+    sound.play();
+  }
 }

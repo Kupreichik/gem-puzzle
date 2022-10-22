@@ -8,6 +8,7 @@ import { setStartState } from "./set-start-state"
 import { changeSize } from "./change-size"
 import { handleBtnClick } from "./handle-btn-click"
 import { showTime } from "./show-time"
+import { Sound } from "./sound-class"
 
 export let canvas = document.createElement('canvas');
 canvas.width  = 320;
@@ -28,8 +29,11 @@ sizes.innerHTML = `<div class="size" id="3">3x3</div>
 export let btns = document.createElement('div');
 btns.classList.add('container');
 btns.innerHTML = `<div class="btn new-game">New Game</div>
-<div class="btn new-game">Save</div>
-<div class="btn new-game">Best Results</div>`
+<div class="btn save">Save</div>
+<div class="btn results">Best Results</div>`;
+
+export let soundBtn = document.createElement('div');
+soundBtn.classList.add('btn', 'sound-btn');
 
 let container = document.createElement('div');
 container.classList.add('container');
@@ -42,6 +46,7 @@ moves.classList.add('moves');
 moves.textContent = `Moves: 0`;
 
 export let game = new Game(context, canvas.width);
+export let sound = new Sound("../sounds/chpok.mp3");
 
 export function init() {
   game.shuffleCells(600);
@@ -51,9 +56,11 @@ export function init() {
   canvas.before(btns);
   canvas.after(sizes);
   btns.after(container);
+  btns.append(soundBtn);
   container.prepend(time);
   container.append(moves);
 
+  soundBtn.innerHTML = game.sound ? sound.soundOn : sound.soundOff;
   showTime();
 
   canvas.addEventListener('mousedown', onMousedown);

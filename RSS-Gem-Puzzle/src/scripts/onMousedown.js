@@ -1,4 +1,4 @@
-import { game, canvas, context } from "./init"
+import { game, canvas } from "./init"
 import { setMovingCell } from "./set-moving-cell"
 import { movingCellDraw } from "./moving-cell-draw"
 import { gameDraw } from "./game-draw"

@@ -11,4 +11,5 @@ export function Game(context, width) {
   
   this.moves = 0;
   this.time = 0;
+  this.sound = true;
 }
