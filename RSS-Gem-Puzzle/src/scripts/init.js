@@ -49,7 +49,18 @@ export let game = new Game(context, canvas.width);
 export let sound = new Sound("../sounds/chpok.mp3");
 
 export function init() {
-  game.shuffleCells(600);
+  if(localStorage.getItem('game')) {
+    let savedGame = JSON.parse(localStorage.getItem('game'));
+    game.size = savedGame.size;
+    game.startState = savedGame.startState;
+    game.state = savedGame.state;
+    game.moves = savedGame.moves;
+    game.time = savedGame.time;
+    game.sound = savedGame.sound;
+  } else {
+    game.shuffleCells(600);
+  }
+
   game.gameDraw();
 
   root.append(canvas);
@@ -60,6 +71,7 @@ export function init() {
   container.prepend(time);
   container.append(moves);
 
+  moves.textContent = `Moves: ${game.moves}`;
   soundBtn.innerHTML = game.sound ? sound.soundOn : sound.soundOff;
   showTime();
 

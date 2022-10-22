@@ -1,7 +1,8 @@
 export function Game(context, width) {
   this.size = 4;
-  this.startState = this.setStartState()
+  this.startState = this.setStartState();
   this.state = JSON.parse(JSON.stringify(this.startState));
+
   this.movingNum;
   this.movingCell;
 
