@@ -6,6 +6,8 @@ import { onMouseup } from "./onMouseup";
 import { canMove } from "./can-move";
 
 export function onMousedown(event) {
+  if(!game.timeRuns) { return false };
+  
   let x = (event.pageX - canvas.offsetLeft) / game.cellSize | 0;
   let y = (event.pageY - canvas.offsetTop) / game.cellSize | 0;
 

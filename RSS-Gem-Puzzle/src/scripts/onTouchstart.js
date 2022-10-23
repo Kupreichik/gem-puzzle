@@ -6,6 +6,8 @@ import { canMove } from "./can-move";
 import { onTouchend } from "./onTouchend";
 
 export function onTouchstart(event) {
+  if(!game.timeRuns) { return false };
+
   let x = (event.touches[0].pageX - canvas.offsetLeft) / game.cellSize | 0;
   let y = (event.touches[0].pageY - canvas.offsetTop) / game.cellSize | 0;
 

@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+  position: relative;
   margin-top: 12px;
   margin-bottom: 12px;
   display: flex;
@@ -31,6 +32,8 @@ body {
 }
 
 .current-size {
+  border: 1px solid;
+  padding: 1px 4px;
   color: #00e2bb
 }
 
@@ -61,4 +64,50 @@ svg {
 path {
   fill: #a5a5a5;
   stroke: #a5a5a5;
+}
+
+.res-container {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 320px;
+  height: 0;
+  top: 81px;
+  background-color: black;
+  transition: all 0.4s;
+}
+
+.res-container-active {
+  height: 404px;
+}
+
+.res-size {
+  cursor: pointer;
+}
+
+.res-size:active {
+  color: aliceblue;
+}
+
+.res-heading {
+  color: #00e2bb;
+  width: 106px;
+  text-align: center;
+}
+
+.res-headings {
+  border-bottom: 1px solid #00e2bb;
+  padding-bottom: 4px;
+}
+
+.res-row {
+  border-bottom: 1px solid #a5a5a5;
+  padding-bottom: 4px;
+  height: 17px;
+}
+
+.row {
+  display: inline-block;
+  width: 106px;
+  text-align: center;
 }

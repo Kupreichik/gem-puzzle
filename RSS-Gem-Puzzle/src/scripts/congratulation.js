@@ -1,4 +1,5 @@
 import { game, canvas } from "./init";
+import { saveGameResult } from "./save-game-result";
 import { Sound } from "./sound-class";
 
 export function congratulation() {
@@ -31,4 +32,6 @@ export function congratulation() {
     let victorySound = new Sound("../sounds/zvuk-fanfar.mp3");
     victorySound.play();
   }
+
+  saveGameResult();
 }

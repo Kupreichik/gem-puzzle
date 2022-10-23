@@ -9,6 +9,7 @@ import { changeSize } from "./change-size";
 import { handleBtnClick } from "./handle-btn-click";
 import { showTime } from "./show-time";
 import { Sound } from "./sound-class";
+import { results } from "./results";
 
 export let canvas = document.createElement('canvas');
 canvas.width  = 320;
@@ -79,4 +80,8 @@ export function init() {
   canvas.addEventListener('touchstart', onTouchstart);
   sizes.addEventListener('click', changeSize);
   btns.addEventListener('click', handleBtnClick);
+
+  if(localStorage.getItem('results-p')) {
+    results.setResults(JSON.parse(localStorage.getItem('results-p')));
+  }
 }
