@@ -1,9 +1,9 @@
-import { Game } from "./game-class"
-import { shuffleCells } from "./shuffle-cells"
-import { setStartState } from "./set-start-state"
-import { gameDraw } from "./game-draw"
-import { canvas, time, moves } from "./init"
-import { showTime } from "./show-time"
+import { Game } from "./game-class";
+import { shuffleCells } from "./shuffle-cells";
+import { setStartState } from "./set-start-state";
+import { gameDraw } from "./game-draw";
+import { canvas, time, moves } from "./init";
+import { showTime } from "./show-time";
 
 Game.prototype.newGame = function() {
   this.moves = 0;

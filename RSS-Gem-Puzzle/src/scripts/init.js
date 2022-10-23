@@ -1,14 +1,14 @@
-import { Game } from "./game-class"
-import { shuffleCells } from "./shuffle-cells"
-import { gameDraw } from "./game-draw"
-import { root } from "./dom-elements"
-import { onMousedown } from "./onMousedown"
-import { onTouchstart } from "./onTouchstart"
-import { setStartState } from "./set-start-state"
-import { changeSize } from "./change-size"
-import { handleBtnClick } from "./handle-btn-click"
-import { showTime } from "./show-time"
-import { Sound } from "./sound-class"
+import { Game } from "./game-class";
+import { shuffleCells } from "./shuffle-cells";
+import { gameDraw } from "./game-draw";
+import { root } from "./dom-elements";
+import { onMousedown } from "./onMousedown";
+import { onTouchstart } from "./onTouchstart";
+import { setStartState } from "./set-start-state";
+import { changeSize } from "./change-size";
+import { handleBtnClick } from "./handle-btn-click";
+import { showTime } from "./show-time";
+import { Sound } from "./sound-class";
 
 export let canvas = document.createElement('canvas');
 canvas.width  = 320;

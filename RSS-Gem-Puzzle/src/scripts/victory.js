@@ -1,4 +1,4 @@
-import { Game } from "./game-class"
+import { Game } from "./game-class";
 
 Game.prototype.victory = function() {
   for (let i = 0; i < this.size; i++) {

@@ -1,9 +1,9 @@
-import { Game } from "./game-class"
-import { getNullCell } from "./get-null-cell"
-import { gameDraw } from "./game-draw"
-import { canvas, moves, sound } from "./init"
-import { victory } from "./victory"
-import { congratulation } from "./congratulation"
+import { Game } from "./game-class";
+import { getNullCell } from "./get-null-cell";
+import { gameDraw } from "./game-draw";
+import { canvas, moves, sound } from "./init";
+import { victory } from "./victory";
+import { congratulation } from "./congratulation";
 
 Game.prototype.finishMove = function() {
   let nullCell = this.getNullCell();

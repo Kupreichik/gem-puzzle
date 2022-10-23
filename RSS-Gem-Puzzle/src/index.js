@@ -1,3 +1,3 @@
-import { init } from "./scripts/init"
+import { init } from "./scripts/init";
 
 window.onload = init;

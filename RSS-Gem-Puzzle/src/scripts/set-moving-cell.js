@@ -1,5 +1,5 @@
-import { Game } from "./game-class"
-import { canvas } from "./init"
+import { Game } from "./game-class";
+import { canvas } from "./init";
 
 Game.prototype.setMovingCell = function(event) {
   let x = (event.pageX - canvas.offsetLeft) / this.cellSize | 0;

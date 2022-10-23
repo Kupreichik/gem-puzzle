@@ -1,5 +1,5 @@
-import { Game } from "./game-class"
-import { getNullCell } from "./get-null-cell"
+import { Game } from "./game-class";
+import { getNullCell } from "./get-null-cell";
 
 Game.prototype.canMove = function(x, y) {
   let nullCell = this.getNullCell();

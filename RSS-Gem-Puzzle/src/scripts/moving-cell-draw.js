@@ -1,5 +1,5 @@
-import { Game } from "./game-class"
-import { game, canvas } from "./init"
+import { Game } from "./game-class";
+import { game, canvas } from "./init";
 
 Game.prototype.movingCellDraw = function(event) {
   game.context.clearRect(0, 0, canvas.width, canvas.height);

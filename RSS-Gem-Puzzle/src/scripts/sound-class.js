@@ -1,4 +1,4 @@
-import { root } from "./dom-elements"
+import { root } from "./dom-elements";
 
 export function Sound(src) {
   this.sound = document.createElement("audio");

@@ -1,7 +1,7 @@
-import { Game } from "./game-class"
-import { getRandomBool } from "./get-random-bool"
-import { getNullCell } from "./get-null-cell"
-import { moveCell } from "./move-cell"
+import { Game } from "./game-class";
+import { getRandomBool } from "./get-random-bool";
+import { getNullCell } from "./get-null-cell";
+import { moveCell } from "./move-cell";
 
 Game.prototype.shuffleCells = function(count) {
   let x, y;

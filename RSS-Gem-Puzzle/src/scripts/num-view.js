@@ -1,4 +1,4 @@
-import { Game } from "./game-class"
+import { Game } from "./game-class";
 
 Game.prototype.numView = function() {
   this.context.font = "bold " + Math.round(this.cellSize/2) + "px Sans";

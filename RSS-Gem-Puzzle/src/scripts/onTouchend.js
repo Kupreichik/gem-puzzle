@@ -1,5 +1,5 @@
-import { game, canvas } from "./init"
-import { finishMove } from "./finish-move"
+import { game, canvas } from "./init";
+import { finishMove } from "./finish-move";
 import { autoMove } from "./auto-move";
 
 export function onTouchend(event) {

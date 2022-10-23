@@ -1,4 +1,4 @@
-import { Game } from "./game-class"
+import { Game } from "./game-class";
 
 Game.prototype.setStartState = function() {
   let state = [];

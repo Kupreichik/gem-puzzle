@@ -1,5 +1,5 @@
-import { game, canvas } from "./init"
-import { Sound } from "./sound-class"
+import { game, canvas } from "./init";
+import { Sound } from "./sound-class";
 
 export function congratulation() {
   localStorage.removeItem('game');

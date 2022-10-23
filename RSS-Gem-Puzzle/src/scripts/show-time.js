@@ -1,4 +1,4 @@
-import { game, time } from "./init"
+import { game, time } from "./init";
 
 export function showTime() {
   let seconds = game.time % 60;

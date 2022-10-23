@@ -1,4 +1,4 @@
-import { game, canvas } from "./init"
+import { game, canvas } from "./init";
 
 export function autoMove() {
   try {

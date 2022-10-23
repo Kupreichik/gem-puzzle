@@ -1,5 +1,5 @@
-import { game } from "./init"
-import { newGame } from "./new-game"
+import { game } from "./init";
+import { newGame } from "./new-game";
 
 export function changeSize(event) {
   if(event.target.classList.contains('size')) {

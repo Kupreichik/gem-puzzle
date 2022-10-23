@@ -1,6 +1,6 @@
-import { Game } from "./game-class"
-import { cellView } from "./cell-view"
-import { numView } from "./num-view"
+import { Game } from "./game-class";
+import { cellView } from "./cell-view";
+import { numView } from "./num-view";
 
 Game.prototype.gameDraw = function() {
   for (let i = 0; i < this.size; i++) {

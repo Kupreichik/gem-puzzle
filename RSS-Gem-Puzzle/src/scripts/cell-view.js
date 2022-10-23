@@ -1,4 +1,4 @@
-import { Game } from "./game-class"
+import { Game } from "./game-class";
 
 Game.prototype.cellView = function(x, y) {
   this.context.fillStyle = this.color;
