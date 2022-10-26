@@ -28,7 +28,6 @@ export function autoMove() {
       setTimeout(autoMove, 1);
     } else {
       game.finishMove();
-      
     }
   } catch {
     console.log('Ошибка обработана')

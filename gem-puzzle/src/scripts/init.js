@@ -21,7 +21,7 @@ context.fillRect(0, 0, canvas.width, canvas.height);
 export let sizes = document.createElement('div');
 sizes.classList.add('container');
 sizes.innerHTML = `<div class="size" id="3">3x3</div>
-                  <div class="size current-size" id="4">4x4</div>
+                  <div class="size" id="4">4x4</div>
                   <div class="size" id="5">5x5</div>
                   <div class="size" id="6">6x6</div>
                   <div class="size" id="7">7x7</div>
@@ -76,6 +76,12 @@ export function init() {
   moves.textContent = `Moves: ${game.moves}`;
   soundBtn.innerHTML = game.sound ? sound.soundOn : sound.soundOff;
   showTime();
+
+  [...document.querySelectorAll('.size')].forEach(el => {
+    if (el.textContent[0] == game.size) {
+      el.classList.add('current-size');
+    }
+  });
 
   canvas.addEventListener('mousedown', onMousedown);
   canvas.addEventListener('touchstart', onTouchstart);

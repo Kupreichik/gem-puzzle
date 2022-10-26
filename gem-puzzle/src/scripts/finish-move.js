@@ -18,6 +18,7 @@ Game.prototype.finishMove = function() {
   this.positionX = 0;
   this.positionY = 0;
   this.mouseDownAt = 0;
+  this.isEnable = true;
   moves.textContent = `Moves: ${this.moves}`;
 
   if(this.sound) {
