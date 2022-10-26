@@ -53,6 +53,7 @@ export function init() {
   if(localStorage.getItem('game')) {
     let savedGame = JSON.parse(localStorage.getItem('game'));
     game.size = savedGame.size;
+    game.cellSize = Math.round(canvas.width / game.size);
     game.startState = savedGame.startState;
     game.state = savedGame.state;
     game.moves = savedGame.moves;
