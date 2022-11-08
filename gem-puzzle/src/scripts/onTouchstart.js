@@ -15,7 +15,7 @@ export function onTouchstart(event) {
     if (game.canMove(x, y)) {
       game.isEnable = false;
       game.setMovingCell(event.touches[0]);
-      canvas.addEventListener('touchmove', function (event) { game.movingCellDraw(event.touches[0]); });
+      canvas.addEventListener('touchmove', game.movingCellDraw);
       canvas.addEventListener('touchend', onTouchend);
     };
     event.preventDefault();
